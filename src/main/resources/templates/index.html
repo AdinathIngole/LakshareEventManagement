@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lashkar Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .icon-list {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .icon-list li {
+            margin: 5px 0;
+        }
+
+        .dropdown-container {
+            display: inline-block;
+        }
+
+        .dropdown-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .dropdown-container label {
+            cursor: pointer;
+        }
+
+        .dropdown-container input[type="checkbox"]:checked ~ .icon-list {
+            display: block;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px; /* Add margin between the navigation links */
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding: 0 20px;
+        }
+
+        /* body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: pink;
+        } */
+
+
+        a{
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <nav>
+        <div class="logo-container">
+            <a href="index.html"><img src="/logo_transparent.png" alt="Lashkar Events Logo" class="logo"></a>
+        </div>
+        <ul>
+            <li><a href="index4.html" target="_blank">Home</a></li>
+            <li><a href="about.html" target="_blank">About Us</a></li>
+            <li><a href="events.html" target="_blank">Events</a></li>
+            <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+            <li><a href="gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="contact.html" target="_blank">Contact Us</a></li>
+            <li>
+                <div class="dropdown-container">
+                    <input type="checkbox" id="check">
+                    <label for="check"><i class="fa-solid fa-share-nodes"></i></label>
+                    <ul class="icon-list" id="iconList">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li><br>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li><br>    
+                        <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+   </header> 
+</body>
+</html>
