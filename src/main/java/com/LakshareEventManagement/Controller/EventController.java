@@ -11,5 +11,11 @@ public class EventController {
 		
 		return "index";
 	}
+	@RequestMapping("/contact")
+	public String COntactPage() {
+		
+		return "ContactUs";
+	}
+	
     
 }

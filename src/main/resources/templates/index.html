@@ -1,65 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar with Carousel and Content</title>
+    <title>Lakshare_Events-Home </title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/Footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/Navbar.css}">
+<style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: black;   
-            /* #333 */
-            padding: 12px 24px; /* Increase padding by 20% */
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        .navbar ul li {
-            margin: 0 12px; /* Increase margin by 20% */
-        }
-
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 12px; /* Increase padding by 20% */
-            transition: background 0.3s;
-        }
-
-        .navbar ul li a:hover {
-            background-color: #575757;
-            border-radius: 5px;
-        }
-
-        .logo {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .logo img {
-            height: 120px; /* Increase height by 20% */
-        }
-
-        .navbar-left,
-        .navbar-right {
-            display: flex;
-            align-items: center;
-        }
-
+        
         .carousel-item img {
             height: 80vh; /* Double the original 40vh */
             object-fit: cover;
@@ -125,22 +78,9 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="navbar-left">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#events">Events</a></li>
-        </ul>
-        <div class="logo">
-            <a href="#home"><img src="/LASHKARE EVENT MANAGEMENT (1)-Photoroom.png" alt="Logo"></a>
-        </div>
-        <ul class="navbar-right">
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-
+   <!-- Include NavBar Header Section-->
+    <div th:insert="~{fragment/Navbar :: navbar}"></div>
+    <!-- Start Home Page Content-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 80vh;">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -149,13 +89,13 @@
         </ol>
         <div class="carousel-inner" style="height: 100%;">
             <div class="carousel-item active">
-                <img src="/wedding_.jpg" class="d-block w-100" alt="Image 1" style="object-fit: cover; height: 100%;">
+                <img th:src="@{/Images/stage.avif}" class="d-block w-100" alt="Image 1" style="object-fit: cover; height: 100%;">
             </div>
             <div class="carousel-item">
-                <img src="bday_splash.jpg" class="d-block w-100" alt="Image 2" style="object-fit: cover; height: 100%;">
+                <img th:src="@{/Images/bday_cover.avif}" class="d-block w-100" alt="Image 2" style="object-fit: cover; height: 100%;">
             </div>
             <div class="carousel-item">
-                <img src="/Stage.jpg" class="d-block w-100" alt="Image 3" style="object-fit: cover; height: 100%;">
+                <img th:src="@{/Images/corporate_event.jpeg}" class="d-block w-100" alt="Image 3" style="object-fit: cover; height: 100%;">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -172,19 +112,19 @@
         <div class="row text-center">
             <div class="col-md-4">
                 <h3>Wedding</h3>
-                <img src="/weeding.avif" alt="Circular Image 1" class="rounded-circle mb-3">
+                <img th:src="@{/Images/weeding.avif}" alt="Circular Image 1" class="rounded-circle mb-3">
                 <p>Dream weddings planned with perfection</p>
                 <p>Elegant celebrations for every couple</p>
             </div>
             <div class="col-md-4">
                 <h3>Social Gatherings</h3>
-                <img src="/social-gathering.avif" alt="Circular Image 2" class="rounded-circle mb-3">
+                <img th:src="@{/Images/social-gathering.avif}" alt="Circular Image 2" class="rounded-circle mb-3">
                 <p>Memorable events tailored for you.</p>
                 <p>Elegant celebrations for every couple</p>
             </div>
             <div class="col-md-4">
                 <h3>Corporate Events</h3>
-                <img src="/corporate_event.jpeg" alt="Circular Image 3" class="rounded-circle mb-3">
+                <img th:src="@{/Images/corporate_event.jpeg}" alt="Circular Image 3" class="rounded-circle mb-3">
                 <p>Professional events, exceptional experiences</p>
                 <p>Seamless planning for corporate success</p>
             </div>
@@ -192,7 +132,7 @@
     </div>
     <div >
         <div class="main">
-            <img src="/Team_Management.jpg" height= "450px" width = "" alt="team" id="teamid">
+            <img th:src="@{/Images/Team_Management.jpg}" height= "450px" width = "" alt="team" id="teamid">
             <div class="main team" id="tw" >
                 <h2>Team Work</h2>
                 <p>Teamwork is the cornerstone of successful event management, 
@@ -203,6 +143,8 @@
         </div>
     </div>
 
+    <!-- Include Footer Section-->
+    <div th:insert="~{fragment/Footer :: footerfrag}"></div>
     <!-- <iframe src="/Brilliant_team-min-1536x851 (1).webp" frameborder="0" width="100%" height="1000px"></iframe> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

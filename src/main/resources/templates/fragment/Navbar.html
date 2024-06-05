@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+</head>
+<body>
+    <div th:fragment="navbar">
+        <nav class="navbar">
+            <ul class="navbar-left">
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutUs">About Us</a></li>
+                <li><a href="/events">Events</a></li>
+            </ul>
+            <div class="logo">
+                <a href="#home"> <img th:src="@{/Images/Lakshare_Event_Logo.png}" alt="Logo"></a>
+            </div>
+            <ul class="navbar-right">
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
