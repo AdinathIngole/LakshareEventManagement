@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us - Lashkare EVENT Management</title>
+    
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/CSS/Footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/Navbar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/AboutUs.css}">
+  
 </head>
 <body>
-    <h1>Welcome to about us page</h1>
-    <h2> Enquire Form</h2>
+    <!-- Include NavBar Header Section-->
+    <div th:insert="~{/Navbar :: navbar}"></div>
+    
+    <!-- NAVBAR END -->
+
+     <div class="container">
+        <div class="content">
+            <img th:src="@{/Images/about.jpg}" alt="Office Image">
+            <div class="info">
+                <h2>About Us</h2>
+                <p>
+                    Welcome to LASHKARE EVENT MANAGEMENT, your premier event management partner established in January 2024. We specialize in creating unforgettable experiences for a variety of occasions, including birthday parties, wedding anniversaries, weddings, award functions, engagements, name ceremonies, munja ceremonies, and themed events featuring popular film and cartoon characters.
+                </p>
+                <p>
+                    Headquartered at OFFICE NO 104 ARENA LOTUS ABOVE SBI BANK VADAGAO SHERI PUNE 411014 with branches in Pune and Shabhajinagar, we pride ourselves on our dedicated team of 15 professionals who work tirelessly to bring your vision to life.
+                </p>
+                <p>
+                    Contact us at 8856916500 (also available on WhatsApp) or via email at adityalashkare23@gmail.com for more information.
+                </p>
+            </div>
+        </div>
+        <section class="mission-vision">
+            <div class="mission">
+                <h2>Mission</h2>
+                <p>
+                    Our mission is to deliver exceptional event management services that exceed our clients' expectations through creativity, innovation, and flawless execution.
+                </p>
+            </div>
+            <div class="image">
+                <img th:src="@{/Images/mix.png}" alt="Event Image">
+            </div>
+            <div class="vision">
+                <h2>Vision</h2>
+                <p>
+                    Our vision is to be recognized as the leading event management company in the region, known for our commitment to excellence, attention to detail, and customer satisfaction.
+                </p>
+            </div>
+        </section>
+        <div class="overlay-container">
+            <img th:src="@{/Images/eventaboutus.jpg}" alt="Event Image">
+            <div class="overlay">
+                <div class="text">Welcome to Lashkare Event Management</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Include Footer Section-->
+    <div  id="footer-placeholder" th:insert="~{/Footer :: footerfrag}"></div>
+     <script th:src="@{/JS/toggleMenu.js}"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    function toggleMenu() {
+            const navbarLinks = document.querySelector('.navbar-links');
+            navbarLinks.classList.toggle('active');
+        }
+
+        function toggleAdminDropdown() {
+            const dropdown = document.getElementById('dropdown-content');
+            dropdown.classList.toggle('show');
+        }
+
+      </script>
 </body>
 </html>
+
