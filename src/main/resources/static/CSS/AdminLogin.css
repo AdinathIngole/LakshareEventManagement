@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+/* BASIC */
+
+body {
+  font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  height: 100vh;
+}
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+} 
+
+#icon {
+  width:60%;
+}
+
+#footer-placeholder{
+    margin-top: 100px;
+    margin-bottom: -200px;
+}

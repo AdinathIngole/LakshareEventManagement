@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style_navbar_mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR HTML START -->
+    <div th:fragment="navbar">
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="logo">
+            <a href="#home"><img th:src="@{/Images/L_p_new.png}" alt="Logo"></a>
+        </div>
+        <ul class="navbar-links left">
+            <li><a href="/">Home</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li class="dropdown-parent">
+                <a href="/events">Events</a>
+                <div class="dropdown">
+                    <a href="/events#wedding">Wedding</a>
+                    <a href="/events#birthday-party">Birthday Party</a>
+                    <a href="/events#wedding-anniversary">Wedding Anniversary</a>
+                    <a href="/events#engagement">Engagement</a>
+                    <a href="/events#munja-ceremony">Munja Ceremony</a>
+                    <a href="/events#name-ceremony">Name Ceremony</a>
+                    <a href="/events#filmy-cartoon-characters">Filmy & Cartoon Characters</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-links right">
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li class="admin-icon">
+                <i class="fa fa-solid fa-user" id="admin-icon" onclick="toggleAdminDropdown()"></i>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="/adminLogin">Login</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- NAVBAR HTML SECTION END -->
+</div>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
